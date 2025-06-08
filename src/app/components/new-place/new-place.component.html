@@ -1,0 +1,24 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="name" class="form-label">name</label>
+    <input type="text" class="form-control" id="name" formControlName="name">
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">description</label>
+    <textarea class="form-control" id="description" rows="3" formControlName="description"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="lat" class="form-label">latitude</label>
+    <input type="number" class="form-control" id="lat" formControlName="latitude">
+  </div>
+  <div class="mb-3">
+    <label for="long" class="form-label">longitude</label>
+    <input type="number" class="form-control" id="long" formControlName="longitude">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Image</label>
+    <input type="text" class="form-control" formControlName="image">
+  </div>
+  <input type="submit" class="btn btn-primary" value="Submit">
+</form>
+

@@ -1,0 +1,18 @@
+<section class="container">
+  <div *ngFor="let place of places$ | async" class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="place.image || '...'" class="img-fluid rounded-start" [alt]="place.name">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ place.name }}</h5>
+          <p class="card-text">{{ place.description }}</p>
+          <button class="btn btn-primary" (click)="onClickDelete(place)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
